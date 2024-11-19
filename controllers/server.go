@@ -27,4 +27,5 @@ func (s *Server) SetUpRoutes() {
 
 	// receipts routes
 	s.Router.POST("/receipts/process", s.StoreReceipt)
+	s.Router.GET("/receipts/:key/points", s.CalcPoints)
 }
